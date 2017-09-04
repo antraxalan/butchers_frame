@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SGV</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi" />
+  <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+  <link rel="stylesheet" href="jquery-mobile-fluid960.css.css" />
+  <script type="text/javascript" src="jquery-1.8.3.js"></script>
+  <script src="jquery.mobile-1.2.0.min.js"></script>
+  <script src="jquery.timeago.js"></script>
+  <script src="waypoints.min.js"></script>
+  <script src="childbrowser.js"></script>
+</head>
+
+<body>
+  <div data-role="page" id="index">
+    <div data-theme="a" data-role="header">
+     <h3>
+      VACACIONES
+    </h3>
+
+  </div>
+  <div data-role="content"> <a data-role="button" id="check-connection">Validar conexión.</a>
+
+  </div>
+  <div data-theme="a" data-role="footer" data-position="fixed"></div>
+</div>
+</body>
+<script type="text/javascript">
+  var connectionStatus = false;
+
+  $(document).on('pagebeforeshow', '#index', function () {
+    $('#check-connection').hide();
+    setInterval(function () {
+      connectionStatus = navigator.onLine ? 'online' : 'offline';
+    }, 100);
+    function myFunction () {
+      // alert(connectionStatus);
+      if(connectionStatus=='online'){
+        window.location.replace("https://www.cbn.com.bo/webpedidos");
+      }else{
+        alert("Sin conexion.");
+        $('#check-connection').show(300);
+      }
+    }
+    setTimeout(myFunction, 3000);
+
+    $(document).on('click', '#check-connection', function () {
+      myFunction();
+    });
+  });
+</script>
+</html>
+
+
+
+
+
+
+
+
+<!-- <html>
+<head>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery-1.10.2.js"></script>
+  <script type="text/javascript">
+   jQuery(document).ready(function($) {
+    // jQuery("#content").load("http://www.cbn.com.bo/webpedidos/");
+    $.ajax({
+        crossOrigin: true,
+        url: "http://www.cbn.com.bo/webpedidos/",
+        success: function(data) {
+            console.log(data);
+        }
+    });
+   });
+
+ </script>
+ <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  
+   
+ 
+</body>
+</html> -->
