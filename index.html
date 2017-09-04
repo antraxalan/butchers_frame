@@ -16,6 +16,7 @@
   <script src="jquery.timeago.js"></script>
   <script src="waypoints.min.js"></script>
   <!-- <script src="childbrowser.js"></script> -->
+  <link rel="icon" href="icon.png">
 </head>
 <style type="text/css">
   #index {
@@ -78,26 +79,56 @@ and (orientation : portrait) {
     #index {
         background-color:black;
     }
-}*/
+  }*/
 
-@media screen and (orientation: portrait)
-{
-     #index { 
-      background-image:url(corona1.jpg); 
-      background-repeat:no-repeat;
+  @media screen and (orientation: portrait)
+  {
+   #index { 
+    background-image:url(corona1.jpg); 
+    background-repeat:no-repeat;
     background-position:bottom center;
     background-size:cover;  
     background-size: 100%;
-    }
+  }
 }
 @media screen and (orientation: landscape)
 {
-     #index { 
-      background-image:url(land.jpg); 
-      
-    }
+ #index { 
+  background-image:url(land.jpg); 
+  /*background-image:url(corona1.jpg); */
+  /*background-repeat:no-repeat;*/
+  /*background-position:bottom center;*/
+  /*background-size:cover;  */
+  background-size: 100%;
+
+}
 }
 
+.conexion {
+  -moz-box-shadow:inset 0px 0px 15px 3px #23395e;
+  -webkit-box-shadow:inset 0px 0px 15px 3px #23395e;
+  box-shadow:inset 0px 0px 15px 3px #23395e;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+  background:-moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+  background:-webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+  background:-o-linear-gradient(top, #2e466e 5%, #415989 100%);
+  background:-ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+  background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+  background-color:#2e466e;
+  -moz-border-radius:17px;
+  -webkit-border-radius:17px;
+  border-radius:17px;
+  border:1px solid #1f2f47;
+  display:inline-block;
+  /*cursor:pointer;*/
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  padding:6px 13px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #263666;
+}
 
 </style>
 <body>
@@ -108,8 +139,12 @@ and (orientation : portrait) {
     </h3>
 
   </div>
-  <div data-role="content" id="check-connection" align="center"> Sin Conexión.
-  <a data-role="button" >Volver a validar la conexión.</a>
+  <div align="center">
+    <div class="conexion contador" style="font-size: 20px">Sin Conexión.</div>
+  </div>
+  <div data-role="content" id="check-connection" align="center"> 
+    <div class="conexion">Sin Conexión.</div>
+    <a data-role="button" >Volver a validar la conexión.</a>
 
   </div>
   <div data-theme="a" data-role="footer" data-position="fixed"></div>
@@ -123,23 +158,35 @@ and (orientation : portrait) {
     setInterval(function () {
       connectionStatus = navigator.onLine ? 'online' : 'offline';
     }, 100);
-    function myFunction () {
-      alert(connectionStatus);  
+    function valida_online () {
+      // alert(connectionStatus);  
       if(connectionStatus=='online'){
-        alert("ok");
-        // window.location.replace("https://www.cbn.com.bo/webpedidos");
-        $('#check-connection').show(300);
+        // alert("ok");
+        // window.location.replace("https://www.cbn.com.bo/webpedidos/vacaciones");
       }else{
         // alert("ok");
         alert("Sin conexion.");
         $('#check-connection').show(300);
       }
     }
-    setTimeout(myFunction, 3000);
+    setTimeout(valida_online, 5000);
 
     $(document).on('click', '#check-connection', function () {
-      myFunction();
+      valida_online();
     });
+    $('.contador').show();
+    var counter = 6;
+    var myInterval = setInterval(function () {
+      --counter;
+      $('.contador').text(counter);
+      if(counter=='0'){
+        // alert("stop");
+        clearInterval(myInterval);
+        $('.contador').hide();
+      }
+    }, 1000);
+
+
   });
 </script>
 </html>
