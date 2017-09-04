@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.cbnapp_vf" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
-    <preference name="phonegap-version" value="3.7.0" />
+    <!-- <preference name="phonegap-version" value="3.7.0" /> -->
+    <preference name="phonegap-version" value="6.0.0" />
     <name>VACACIONES APP</name>
     <description>
         Cerveceria Boliviana Nacional.
@@ -29,7 +30,7 @@
         <activity android:launchMode="singleInstance" />
     </gap:config-file>
 
-    <!-- <gap:plugin name="org.apache.cordova.battery-status" /> -->
+    <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.console" />
