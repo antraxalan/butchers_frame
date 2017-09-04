@@ -8,6 +8,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
   <link rel="stylesheet" href="jquery-mobile-fluid960.css.css" />
   <script type="text/javascript" src="jquery-1.8.3.js"></script>
@@ -18,7 +19,7 @@
 </head>
 <style type="text/css">
   #index {
-    background: url(corona.jpg);
+    /*background: url(corona.jpg);*/
     /*background-repeat:repeat-y;
     background-position:center center;
     background-attachment:scroll;
@@ -30,11 +31,10 @@
     background-size: cover;
     background-size:100% 100%;*/
 
-    background-repeat:no-repeat;
+   /* background-repeat:no-repeat;
     background-position:bottom center;
     background-size:cover;  
-    /*background-size:100% 100%;*/
-    background-size: 100%;
+    background-size: 100%;*/
   }
   .ui-page {
     background: transparent;
@@ -42,6 +42,63 @@
   .ui-content{
     background: transparent;
   }
+
+
+
+/*#index {
+    background-color:teal;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    #index {
+        background-color:yellow;
+    }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    #index {
+        background-color:orange;
+    }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    #index {
+        background-color:black;
+    }
+}*/
+
+@media screen and (orientation: portrait)
+{
+     #index { 
+      background-image:url(corona.jpg); 
+      background-repeat:no-repeat;
+    background-position:bottom center;
+    background-size:cover;  
+    background-size: 100%;
+    }
+}
+@media screen and (orientation: landscape)
+{
+     #index { 
+      background-image:url(land.jpg); 
+      
+    }
+}
+
+
 </style>
 <body>
   <div data-role="page" id="index">
@@ -51,7 +108,8 @@
     </h3>
 
   </div>
-  <div data-role="content"> <a data-role="button" id="check-connection">Validar conexión.</a>
+  <div data-role="content" id="check-connection" align="center"> Sin Conexión.
+  <a data-role="button" >Volver a validar la conexión.</a>
 
   </div>
   <div data-theme="a" data-role="footer" data-position="fixed"></div>
