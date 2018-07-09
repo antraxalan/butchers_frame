@@ -24,7 +24,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     <preference name="splash-screen-duration" value="10000"/> 
-    <gap:plugin name="org.apache.cordova.battery-status" source="npm"/>
+<!--     <gap:plugin name="org.apache.cordova.battery-status" source="npm"/>
     <gap:plugin name="org.apache.cordova.camera" source="npm"/>
     <gap:plugin name="org.apache.cordova.media-capture" source="npm"/>
     <gap:plugin name="org.apache.cordova.console" source="npm"/>
@@ -41,7 +41,7 @@
     <gap:plugin name="org.apache.cordova.media" source="npm"/>
     <gap:plugin name="org.apache.cordova.network-information" source="npm"/>
     <gap:plugin name="org.apache.cordova.splashscreen" source="npm"/>
-    <gap:plugin name="org.apache.cordova.vibration" source="npm"/>
+    <gap:plugin name="org.apache.cordova.vibration" source="npm"/> -->
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
