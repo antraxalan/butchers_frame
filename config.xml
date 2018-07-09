@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!-- <widget id="com.phonegap.helloworld" version="5.4.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"> -->
-<widget id="com.phonegap.helloworld" version="8.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.helloworld" version="5.4.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<!-- <widget id="com.phonegap.helloworld" version="8.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"> -->
     <name>BUTCHERS</name>
     <description>
         BUTCHERS
@@ -39,7 +39,7 @@
     <!-- <gap:plugin name="org.apache.cordova.geolocation" source="npm"/> -->
     <!-- <gap:plugin name="org.apache.cordova.globalization" source="npm"/> -->
     <!-- <gap:plugin name="org.apache.cordova.inappbrowser" source="npm"/> -->
-    <gap:plugin name="cordova-plugin-whitelist" spec="8.0.0" />
+    <gap:plugin name="cordova-plugin-whitelist" spec="1.0.0" />
     <!-- <gap:plugin spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" /> -->
     <!-- <gap:plugin name="org.apache.cordova.media" source="npm"/> -->
     <!-- <gap:plugin name="org.apache.cordova.network-information" source="npm"/> -->
