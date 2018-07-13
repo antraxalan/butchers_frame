@@ -152,7 +152,7 @@ and (orientation : portrait) {
 
 
 <div data-role="page" id="butchers" >
-<iframe src="https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185" style="border: 0;  width: 100%; height: 700px !important;">Error.</iframe>
+<iframe id="cuadro_butchers" src="https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185" style="border: 0;  width: 100%;">Error.</iframe>
 </div>
 
 
@@ -171,6 +171,7 @@ and (orientation : portrait) {
         // alert("ok");
         // window.location.href = "detalles.html";
         window.location.href = "index.html#butchers";
+        $("#cuadro_butchers").css("height","400");
         // $('#index').fadeOut(800);
         // $('#'+idsec).fadeIn(800);
 
