@@ -129,10 +129,18 @@ and (orientation : portrait) {
   text-decoration:none;
   text-shadow:0px 1px 0px #263666;
 }
+body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
 
+            #content
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+            }
 </style>
 <body>
-  <div data-role="page" id="index">
+  <!-- <div data-role="page" id="index">
     <div data-theme="a" data-role="header">
      <h3>
       BUTCHERS
@@ -148,13 +156,17 @@ and (orientation : portrait) {
 
   </div>
   <div data-theme="a" data-role="footer" data-position="fixed"></div>
+</div> -->
+
+<!-- <div data-role="page" id="butchers" style="border: 0;  width: 100%; height: 100% !important;">
+<iframe src="https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185" style="border: 0;  width: 100%; height: 100% !important;">Error.</iframe>
 </div>
+ -->
 
 
-<div data-role="page" id="butchers">
-  <iframe src="https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185" style="border: 0; margin: 0; width: 100%; height: 100%">Error.</iframe>
-</div>
-
+ <div id="contenido">
+            <iframe width="100%" height="800" frameborder="0" src="https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185" />
+        </div>
 
 </body>
 <script type="text/javascript">
@@ -170,7 +182,11 @@ and (orientation : portrait) {
       if(connectionStatus=='online'){
         // alert("ok");
         // window.location.href = "detalles.html";
-        window.location.href = "index.html#butchers";
+        // window.location.href = "index.html#butchers";
+        $('#contenido').load('https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185');
+        // $('#index').fadeOut(800);
+        // $('#'+idsec).fadeIn(800);
+
         // window.location.replace("https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185");
         // window.location.href = "https://www.butchers-cbba.com/ordering/restaurant/menu?restaurant_uid=161bf5eb-2d4d-4365-aa0e-45512a6ce6b7&client_is_mobile=true&glfa_cid=1547340812.1529714508&glfa_t=1529714580185";
 
